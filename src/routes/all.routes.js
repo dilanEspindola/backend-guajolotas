@@ -1,5 +1,5 @@
 import { Router } from "express";
-import AllData from "../Models/All.js";
+import AllData from "../Models/All";
 const route = Router();
 
 route.get("/", async (req, res) => {

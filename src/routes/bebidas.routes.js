@@ -1,5 +1,5 @@
 import { Router } from "express";
-import Bebidas from "../Models/Bebidas.js";
+import Bebidas from "../Models/Bebidas";
 
 const route = Router();
 

@@ -1,8 +1,8 @@
 import { Router } from "express";
-import Users from "../Models/Users.js";
+import Users from "../Models/Users";
 import bcrypt from "bcryptjs";
 import jsonwebtoken from "jsonwebtoken";
-import { SECRET } from "../config.js";
+import { SECRET } from "../config";
 const route = Router();
 
 route.get("/", (req, res) => {
@@ -31,7 +31,7 @@ route.post("/login", async (req, res) => {
     const validatePassword = await bcrypt.compare(password, getUser.password);
     if (validatePassword) {
       const getId = getUser._id;
-      const token = jsonwebtoken.sign({ getId }, "KsWeOnXZgx", {
+      const token = jsonwebtoken.sign({ getId }, SECRET, {
         expiresIn: "1d",
       });
       res.json({ auth: true, password: true, token, user: getUser.usuario });

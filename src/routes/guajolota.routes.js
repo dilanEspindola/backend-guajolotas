@@ -1,5 +1,5 @@
 import { Router } from "express";
-import Guajolotas from "../Models/Guajolotas.js";
+import Guajolotas from "../Models/Guajolotas";
 
 const route = Router();
 

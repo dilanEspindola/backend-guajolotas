@@ -1,5 +1,5 @@
 import { Router } from "express";
-import Tamales from "../Models/Tamales.js";
+import Tamales from "../Models/Tamales";
 
 const route = Router();
 

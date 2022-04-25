@@ -1,12 +1,12 @@
 import express from "express";
 import cors from "cors";
-import "./database.js";
+import "./database";
 
-import usersRoute from "./routes/users.routes.js";
-import guajolotasRoute from "./routes/guajolota.routes.js";
-import bebidasRoute from "./routes/bebidas.routes.js";
-import tamalesRoute from "./routes/tamales.routes.js";
-import allRoute from "./routes/all.routes.js";
+import usersRoute from "./routes/users.routes";
+import guajolotasRoute from "./routes/guajolota.routes";
+import bebidasRoute from "./routes/bebidas.routes";
+import tamalesRoute from "./routes/tamales.routes";
+import allRoute from "./routes/all.routes";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
